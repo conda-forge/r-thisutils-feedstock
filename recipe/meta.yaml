@@ -1,4 +1,4 @@
-{% set version = "0.4.9" %}
+{% set version = "0.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/thisutils_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/thisutils/thisutils_{{ version }}.tar.gz
-  sha256: cfe4728d1c32148c8a1f2a041eadf6b20418b6539cf4d8f9db68bce41800faf9
+  sha256: 2c688209a5f41f11c3455b765a8e5155acd87b76942305028eed38c268e44b89
 
 build:
   number: 0
@@ -36,20 +36,20 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-callr
     - r-cli
-    - r-doparallel
-    - r-foreach
     - r-matrix
     - r-pak
+    - r-ps
     - r-rcpp
     - r-rlang
   run:
     - r-base
+    - r-callr
     - r-cli
-    - r-doparallel
-    - r-foreach
     - r-matrix
     - r-pak
+    - r-ps
     - r-rcpp
     - r-rlang
 
