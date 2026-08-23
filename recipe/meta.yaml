@@ -36,20 +36,20 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-callr
     - r-cli
-    - r-doparallel
-    - r-foreach
     - r-matrix
     - r-pak
+    - r-ps
     - r-rcpp
     - r-rlang
   run:
     - r-base
+    - r-callr
     - r-cli
-    - r-doparallel
-    - r-foreach
     - r-matrix
     - r-pak
+    - r-ps
     - r-rcpp
     - r-rlang
 
