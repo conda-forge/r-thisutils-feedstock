@@ -1,4 +1,4 @@
-{% set version = "0.5.0" %}
+{% set version = "0.5.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/thisutils_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/thisutils/thisutils_{{ version }}.tar.gz
-  sha256: 2c688209a5f41f11c3455b765a8e5155acd87b76942305028eed38c268e44b89
+  sha256: 0977ffe9d97b8b1ceaa8b4260636000e435f029742b98d66dd90afab91578a59
 
 build:
   number: 0
@@ -36,18 +36,20 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-callr
+    - r-callr >=3.5.0
     - r-cli
     - r-matrix
+    - r-mgcv
     - r-pak
     - r-ps
     - r-rcpp
     - r-rlang
   run:
     - r-base
-    - r-callr
+    - r-callr >=3.5.0
     - r-cli
     - r-matrix
+    - r-mgcv
     - r-pak
     - r-ps
     - r-rcpp
@@ -67,7 +69,7 @@ about:
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
-  summary: Collection of utility functions for data analysis and computing.
+  summary: Reliable Utilities for Reusable Research Workflows
   description: |
     Provides utility functions for data analysis and computing. Includes
     functions for logging, parallel processing, and other computational tasks to
